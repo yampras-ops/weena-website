@@ -13,15 +13,15 @@
    แก้สีหลัก: หา #1a1a1a (สีดำ), #0C447C (สีน้ำเงิน), #DC2626 (สีแดง)
    ============================================================ */
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#fff}
+body{font-family:'DM Sans',sans-serif;color:#111;background:#fff;font-size:15px}
 nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;border-bottom:.5px solid #e5e5e5;background:#fff;position:sticky;top:0;z-index:100}
 .logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500}
 .nav-right{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
 .nav-links{display:flex;gap:1.25rem}
-.nav-links a{font-size:12px;color:#666;text-decoration:none;letter-spacing:.04em}
-.nav-links a:hover{color:#1a1a1a}
+.nav-links a{font-size:14px;color:#333;text-decoration:none;letter-spacing:.04em}
+.nav-links a:hover{color:#111}
 .lang-toggle{display:flex;border:.5px solid #ccc;border-radius:20px;overflow:hidden}
-.lang-btn{padding:4px 12px;font-size:11px;cursor:pointer;background:transparent;color:#666;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
+.lang-btn{padding:6px 14px;font-size:12px;cursor:pointer;background:transparent;color:#333;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
 .lang-btn.active{background:#1a1a1a;color:#fff}
 .hero{position:relative;height:240px;overflow:hidden;border-bottom:.5px solid #e5e5e5}
 .hero img.bg{width:100%;height:100%;object-fit:cover;display:block}
@@ -29,17 +29,17 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 
 .hero-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem}
 .hero-text{color:#fff}
 .hero-tagline{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:.5rem}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.35)}
 .hero-sub{font-size:13px;opacity:.85;margin-top:.4rem;letter-spacing:.03em}
 .qr-card{background:rgba(255,255,255,.97);border-radius:12px;padding:.75rem .75rem .6rem;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:110px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
 .qr-card-label{font-size:10px;color:#333;font-weight:600;letter-spacing:.06em;text-align:center}
 .qr-card img{width:80px;height:80px;border-radius:6px}
 .qr-card a{font-size:9px;color:#0C447C;text-decoration:none}
 section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
-.sec-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:1.1rem;font-weight:500}
+.sec-label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:1.1rem;font-weight:500}
 /* COMING SOON */
 .cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.75rem}
-.cs-card{border:.5px dashed #ccc;border-radius:10px;padding:1.5rem 1rem;text-align:center;color:#aaa;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.4rem;min-height:130px;justify-content:center}
+.cs-card{border:.5px dashed #ccc;border-radius:10px;padding:1.5rem 1rem;text-align:center;color:#777;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.4rem;min-height:130px;justify-content:center}
 .cs-card i{font-size:24px;margin-bottom:4px}
 /* ★ COMING SOON จริง */
 .cs-card-real{border:.5px solid #e5e5e5;border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color .15s}
@@ -47,8 +47,8 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
 .cs-real-img{height:120px;overflow:hidden}
 .cs-real-img img{width:100%;height:100%;object-fit:cover}
 .cs-real-info{padding:.75rem .9rem}
-.cs-real-name{font-size:13px;font-weight:500;margin-bottom:3px}
-.cs-real-date{font-size:11px;color:#888;margin-bottom:5px}
+.cs-real-name{font-size:14px;font-weight:500;margin-bottom:3px}
+.cs-real-date{font-size:11px;color:#555;margin-bottom:5px}
 .cs-real-price{font-size:13px;font-weight:500}
 /* ALMOST FULL */
 .badge-hot{display:inline-flex;align-items:center;gap:6px;background:#FEE2E2;color:#DC2626;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;letter-spacing:.05em}
@@ -60,41 +60,41 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
 .af-img img{width:100%;height:100%;object-fit:cover}
 .af-img i{font-size:26px}
 .af-info{padding:.7rem .85rem}
-.af-name{font-size:13px;font-weight:500;margin-bottom:3px}
-.af-date{font-size:11px;color:#888;margin-bottom:5px}
+.af-name{font-size:14px;font-weight:500;margin-bottom:3px}
+.af-date{font-size:11px;color:#555;margin-bottom:5px}
 .af-seats{font-size:11px;color:#DC2626;font-weight:500}
 /* CALENDAR */
 .cal-nav{display:flex;align-items:center;gap:.75rem;margin-bottom:1.1rem;flex-wrap:wrap}
 .cal-month-label{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;flex:1}
 .cal-tabs{display:flex;border:.5px solid #ccc;border-radius:8px;overflow:hidden}
-.cal-tab{padding:5px 12px;font-size:11px;cursor:pointer;background:#fff;color:#666;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
+.cal-tab{padding:5px 12px;font-size:11px;cursor:pointer;background:#fff;color:#333;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
 .cal-tab.active{background:#1a1a1a;color:#fff}
 .month-nav{display:flex;gap:3px}
-.month-nav button{width:28px;height:28px;border:.5px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#666;font-size:13px;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.month-nav button{width:28px;height:28px;border:.5px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#333;font-size:13px;display:flex;align-items:center;justify-content:center;transition:background .15s}
 .month-nav button:hover{background:#f5f5f5}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.cal-hdr{text-align:center;font-size:10px;color:#aaa;padding:3px;letter-spacing:.04em}
+.cal-hdr{text-align:center;font-size:10px;color:#777;padding:3px;letter-spacing:.04em}
 .cal-cell{min-height:60px;border:.5px solid #e5e5e5;border-radius:5px;padding:3px;background:#fff;transition:border-color .15s}
 .cal-cell.has-trip{cursor:pointer}
 .cal-cell.has-trip:hover{border-color:#999;background:#fafafa}
 .cal-cell.empty{border-color:transparent;background:transparent}
-.day-num{font-size:10px;font-weight:500;color:#888;margin-bottom:2px}
+.day-num{font-size:10px;font-weight:500;color:#555;margin-bottom:2px}
 .trip-pill{font-size:9px;padding:1px 4px;border-radius:3px;margin-bottom:2px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
 .pill-th{background:#E6F1FB;color:#0C447C}
 .pill-int{background:#FAEEDA;color:#633806}
-.more-tag{font-size:9px;color:#aaa}
+.more-tag{font-size:9px;color:#777}
 .detail-panel{margin-top:.85rem;border:.5px solid #e5e5e5;border-radius:10px;padding:.9rem 1.1rem;background:#fafafa;display:none}
 .detail-panel.open{display:block}
-.detail-date{font-size:10px;color:#aaa;margin-bottom:.6rem;letter-spacing:.06em;text-transform:uppercase}
+.detail-date{font-size:10px;color:#777;margin-bottom:.6rem;letter-spacing:.06em;text-transform:uppercase}
 .trip-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:.5px solid #e5e5e5}
 .trip-row:last-child{border-bottom:none}
 .t-flag{font-size:14px;width:20px;flex-shrink:0;margin-top:1px}
 .t-info{flex:1;min-width:0}
-.t-name{font-size:12px;font-weight:500}
-.t-meta{font-size:11px;color:#888;margin-top:1px}
+.t-name{font-size:13px;font-weight:500}
+.t-meta{font-size:11px;color:#555;margin-top:1px}
 .t-price{font-size:12px;font-weight:500;white-space:nowrap}
 .cal-legend{display:flex;gap:1rem;margin-top:.6rem}
-.leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:#888}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:#555}
 .leg-dot{width:9px;height:9px;border-radius:3px}
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
@@ -104,18 +104,18 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
 .blog-img img{width:100%;height:100%;object-fit:cover}
 .blog-info{padding:.9rem 1rem}
 .blog-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#0C447C;margin-bottom:.4rem}
-.blog-title{font-size:14px;font-weight:500;margin-bottom:.4rem;line-height:1.5}
-.blog-excerpt{font-size:12px;color:#888;line-height:1.65;margin-bottom:.6rem}
+.blog-title{font-size:15px;font-weight:500;margin-bottom:.4rem;line-height:1.5}
+.blog-excerpt{font-size:12px;color:#555;line-height:1.65;margin-bottom:.6rem}
 .blog-date{font-size:11px;color:#bbb}
-.blog-placeholder{border:.5px dashed #ccc;border-radius:10px;padding:2rem;text-align:center;color:#aaa;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.blog-placeholder{border:.5px dashed #ccc;border-radius:10px;padding:2rem;text-align:center;color:#777;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.5rem}
 .blog-placeholder i{font-size:26px}
 /* CONTACT */
 .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem;margin-bottom:.85rem}
-.soc-link{display:flex;align-items:center;gap:7px;padding:.6rem .85rem;border:.5px solid #e5e5e5;border-radius:8px;text-decoration:none;color:#1a1a1a;font-size:12px;font-weight:500;transition:all .15s}
+.soc-link{display:flex;align-items:center;gap:7px;padding:.6rem .85rem;border:.5px solid #e5e5e5;border-radius:8px;text-decoration:none;color:#111;font-size:12px;font-weight:500;transition:all .15s}
 .soc-link:hover{background:#fafafa;border-color:#ccc}
-.soc-link i{font-size:16px;color:#888}
+.soc-link i{font-size:16px;color:#555}
 .phone-row{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500}
-.phone-row i{font-size:17px;color:#888}
+.phone-row i{font-size:17px;color:#555}
 footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
 @media(max-width:600px){
   .hero-content{padding:1rem}
@@ -163,7 +163,11 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
       <img id="qrImg" alt="Line QR">
       <a href="https://lin.ee/WcSB5VV" target="_blank" id="qr-btn">แตะเพื่อเพิ่มเพื่อน</a>
     </div>
-  </div>
+  
+<div style="text-align:center; padding: 1.5rem 1.5rem; background: #f9f9f9; border-bottom: 0.5px solid #e5e5e5;">
+  <a href="https://forms.gle/Yf9ixk8tVb7MZVnE9" target="_blank" style="display: inline-block; background: #DC2626; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: 0.05em; transition: background 0.2s;">
+    📅 จองทริปของคุณ
+  </a>
 </div>
 
 <!-- ============================================================
