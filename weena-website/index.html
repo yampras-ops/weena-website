@@ -8,50 +8,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   2D1N WEENA — STYLESHEET
-   แก้สีหลัก: หา #1a1a1a (สีดำ), #0C447C (สีน้ำเงิน), #DC2626 (สีแดง)
-   ============================================================ */
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;color:#111;background:#fff;font-size:15px}
+body{font-family:'DM Sans',sans-serif;color:#0a0a0a;background:#fff;font-size:16px;line-height:1.6}
+
+/* NAV */
 nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;border-bottom:.5px solid #e5e5e5;background:#fff;position:sticky;top:0;z-index:100}
 .logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500}
 .nav-right{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
 .nav-links{display:flex;gap:1.25rem}
 .nav-links a{font-size:14px;color:#333;text-decoration:none;letter-spacing:.04em}
-.nav-links a:hover{color:#111}
+.nav-links a:hover{color:#0a0a0a}
 .lang-toggle{display:flex;border:.5px solid #ccc;border-radius:20px;overflow:hidden}
-.lang-btn{padding:6px 14px;font-size:12px;cursor:pointer;background:transparent;color:#333;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
+.lang-btn{padding:4px 12px;font-size:12px;cursor:pointer;background:transparent;color:#666;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
 .lang-btn.active{background:#1a1a1a;color:#fff}
-.hero{position:relative;height:240px;overflow:hidden;border-bottom:.5px solid #e5e5e5}
+
+/* HERO */
+.hero{position:relative;height:260px;overflow:hidden;border-bottom:.5px solid #e5e5e5}
 .hero img.bg{width:100%;height:100%;object-fit:cover;display:block}
 .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.22)}
 .hero-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem}
 .hero-text{color:#fff}
-.hero-tagline{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:.5rem}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:400;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.35)}
-.hero-sub{font-size:13px;opacity:.85;margin-top:.4rem;letter-spacing:.03em}
+.hero-tagline{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:.5rem}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.hero-sub{font-size:15px;opacity:.85;margin-top:.4rem;letter-spacing:.03em}
 .qr-card{background:rgba(255,255,255,.97);border-radius:12px;padding:.75rem .75rem .6rem;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:110px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
-.qr-card-label{font-size:10px;color:#333;font-weight:600;letter-spacing:.06em;text-align:center}
+.qr-card-label{font-size:11px;color:#333;font-weight:600;letter-spacing:.06em;text-align:center}
 .qr-card img{width:80px;height:80px;border-radius:6px}
-.qr-card a{font-size:9px;color:#0C447C;text-decoration:none}
+.qr-card a{font-size:10px;color:#0C447C;text-decoration:none}
+
+/* BOOKING BUTTON */
+.booking-bar{text-align:center;padding:1.75rem 1.5rem;background:#fff;border-bottom:.5px solid #e5e5e5}
+.btn-book{display:inline-block;background:#DC2626;color:#fff;padding:15px 42px;border-radius:10px;text-decoration:none;font-size:17px;font-weight:700;letter-spacing:.04em;box-shadow:0 3px 14px rgba(220,38,38,.3);transition:background .2s}
+.btn-book:hover{background:#b91c1c}
+.booking-sub{margin-top:.65rem;font-size:14px;color:#555}
+
+/* SECTIONS */
 section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
-.sec-label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:1.1rem;font-weight:500}
+.sec-label{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#777;margin-bottom:1.1rem;font-weight:500}
+
 /* COMING SOON */
 .cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.75rem}
-.cs-card{border:.5px dashed #ccc;border-radius:10px;padding:1.5rem 1rem;text-align:center;color:#777;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.4rem;min-height:130px;justify-content:center}
+.cs-card{border:.5px dashed #ccc;border-radius:10px;padding:1.5rem 1rem;text-align:center;color:#888;font-size:14px;display:flex;flex-direction:column;align-items:center;gap:.4rem;min-height:130px;justify-content:center}
 .cs-card i{font-size:24px;margin-bottom:4px}
-/* ★ COMING SOON จริง */
 .cs-card-real{border:.5px solid #e5e5e5;border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color .15s}
 .cs-card-real:hover{border-color:#999}
 .cs-real-img{height:120px;overflow:hidden}
 .cs-real-img img{width:100%;height:100%;object-fit:cover}
 .cs-real-info{padding:.75rem .9rem}
-.cs-real-name{font-size:14px;font-weight:500;margin-bottom:3px}
-.cs-real-date{font-size:11px;color:#555;margin-bottom:5px}
-.cs-real-price{font-size:13px;font-weight:500}
+.cs-real-name{font-size:15px;font-weight:500;margin-bottom:3px}
+.cs-real-date{font-size:13px;color:#555;margin-bottom:5px}
+.cs-real-price{font-size:14px;font-weight:500}
+
 /* ALMOST FULL */
-.badge-hot{display:inline-flex;align-items:center;gap:6px;background:#FEE2E2;color:#DC2626;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;letter-spacing:.05em}
+.badge-hot{display:inline-flex;align-items:center;gap:6px;background:#FEE2E2;color:#DC2626;font-size:12px;font-weight:500;padding:3px 10px;border-radius:20px;letter-spacing:.05em}
 .pulse{width:6px;height:6px;border-radius:50%;background:#DC2626;animation:blink 1.5s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .af-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.75rem}
@@ -60,42 +69,44 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
 .af-img img{width:100%;height:100%;object-fit:cover}
 .af-img i{font-size:26px}
 .af-info{padding:.7rem .85rem}
-.af-name{font-size:14px;font-weight:500;margin-bottom:3px}
-.af-date{font-size:11px;color:#555;margin-bottom:5px}
-.af-seats{font-size:11px;color:#DC2626;font-weight:500}
+.af-name{font-size:15px;font-weight:500;margin-bottom:3px}
+.af-date{font-size:13px;color:#555;margin-bottom:5px}
+.af-seats{font-size:13px;color:#DC2626;font-weight:500}
+
 /* CALENDAR */
 .cal-nav{display:flex;align-items:center;gap:.75rem;margin-bottom:1.1rem;flex-wrap:wrap}
-.cal-month-label{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;flex:1}
+.cal-month-label{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;flex:1}
 .cal-tabs{display:flex;border:.5px solid #ccc;border-radius:8px;overflow:hidden}
-.cal-tab{padding:5px 12px;font-size:11px;cursor:pointer;background:#fff;color:#333;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
+.cal-tab{padding:5px 13px;font-size:12px;cursor:pointer;background:#fff;color:#555;border:none;font-family:'DM Sans',sans-serif;transition:all .15s}
 .cal-tab.active{background:#1a1a1a;color:#fff}
 .month-nav{display:flex;gap:3px}
-.month-nav button{width:28px;height:28px;border:.5px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#333;font-size:13px;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.month-nav button{width:30px;height:30px;border:.5px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#555;font-size:14px;display:flex;align-items:center;justify-content:center;transition:background .15s}
 .month-nav button:hover{background:#f5f5f5}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
-.cal-hdr{text-align:center;font-size:10px;color:#777;padding:3px;letter-spacing:.04em}
-.cal-cell{min-height:60px;border:.5px solid #e5e5e5;border-radius:5px;padding:3px;background:#fff;transition:border-color .15s}
+.cal-hdr{text-align:center;font-size:12px;color:#777;padding:4px;letter-spacing:.04em}
+.cal-cell{min-height:64px;border:.5px solid #e5e5e5;border-radius:5px;padding:3px;background:#fff;transition:border-color .15s}
 .cal-cell.has-trip{cursor:pointer}
 .cal-cell.has-trip:hover{border-color:#999;background:#fafafa}
 .cal-cell.empty{border-color:transparent;background:transparent}
-.day-num{font-size:10px;font-weight:500;color:#555;margin-bottom:2px}
-.trip-pill{font-size:9px;padding:1px 4px;border-radius:3px;margin-bottom:2px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
+.day-num{font-size:12px;font-weight:500;color:#666;margin-bottom:2px}
+.trip-pill{font-size:10px;padding:2px 4px;border-radius:3px;margin-bottom:2px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
 .pill-th{background:#E6F1FB;color:#0C447C}
 .pill-int{background:#FAEEDA;color:#633806}
-.more-tag{font-size:9px;color:#777}
-.detail-panel{margin-top:.85rem;border:.5px solid #e5e5e5;border-radius:10px;padding:.9rem 1.1rem;background:#fafafa;display:none}
+.more-tag{font-size:10px;color:#888}
+.detail-panel{margin-top:.85rem;border:.5px solid #e5e5e5;border-radius:10px;padding:1rem 1.25rem;background:#fafafa;display:none}
 .detail-panel.open{display:block}
-.detail-date{font-size:10px;color:#777;margin-bottom:.6rem;letter-spacing:.06em;text-transform:uppercase}
-.trip-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:.5px solid #e5e5e5}
+.detail-date{font-size:12px;color:#777;margin-bottom:.6rem;letter-spacing:.06em;text-transform:uppercase}
+.trip-row{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:.5px solid #e5e5e5}
 .trip-row:last-child{border-bottom:none}
-.t-flag{font-size:14px;width:20px;flex-shrink:0;margin-top:1px}
+.t-flag{font-size:15px;width:22px;flex-shrink:0;margin-top:1px}
 .t-info{flex:1;min-width:0}
-.t-name{font-size:13px;font-weight:500}
-.t-meta{font-size:11px;color:#555;margin-top:1px}
-.t-price{font-size:12px;font-weight:500;white-space:nowrap}
+.t-name{font-size:14px;font-weight:500}
+.t-meta{font-size:13px;color:#555;margin-top:1px}
+.t-price{font-size:14px;font-weight:500;white-space:nowrap}
 .cal-legend{display:flex;gap:1rem;margin-top:.6rem}
-.leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:#555}
-.leg-dot{width:9px;height:9px;border-radius:3px}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:12px;color:#666}
+.leg-dot{width:10px;height:10px;border-radius:3px}
+
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .blog-card{border:.5px solid #e5e5e5;border-radius:10px;overflow:hidden;transition:border-color .15s;text-decoration:none;color:inherit;display:block}
@@ -103,26 +114,30 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid #e5e5e5}
 .blog-img{height:150px;background:#f5f5f5;overflow:hidden}
 .blog-img img{width:100%;height:100%;object-fit:cover}
 .blog-info{padding:.9rem 1rem}
-.blog-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#0C447C;margin-bottom:.4rem}
-.blog-title{font-size:15px;font-weight:500;margin-bottom:.4rem;line-height:1.5}
-.blog-excerpt{font-size:12px;color:#555;line-height:1.65;margin-bottom:.6rem}
-.blog-date{font-size:11px;color:#bbb}
-.blog-placeholder{border:.5px dashed #ccc;border-radius:10px;padding:2rem;text-align:center;color:#777;font-size:13px;display:flex;flex-direction:column;align-items:center;gap:.5rem}
-.blog-placeholder i{font-size:26px}
+.blog-tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#0C447C;margin-bottom:.4rem}
+.blog-title{font-size:16px;font-weight:500;margin-bottom:.4rem;line-height:1.5}
+.blog-excerpt{font-size:14px;color:#555;line-height:1.65;margin-bottom:.6rem}
+.blog-date{font-size:13px;color:#888}
+.blog-placeholder{border:.5px dashed #ccc;border-radius:10px;padding:2rem;text-align:center;color:#888;font-size:14px;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.blog-placeholder i{font-size:28px}
+
 /* CONTACT */
-.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem;margin-bottom:.85rem}
-.soc-link{display:flex;align-items:center;gap:7px;padding:.6rem .85rem;border:.5px solid #e5e5e5;border-radius:8px;text-decoration:none;color:#111;font-size:12px;font-weight:500;transition:all .15s}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.5rem;margin-bottom:.85rem}
+.soc-link{display:flex;align-items:center;gap:8px;padding:.7rem 1rem;border:.5px solid #e5e5e5;border-radius:8px;text-decoration:none;color:#0a0a0a;font-size:14px;font-weight:500;transition:all .15s}
 .soc-link:hover{background:#fafafa;border-color:#ccc}
-.soc-link i{font-size:16px;color:#555}
-.phone-row{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500}
-.phone-row i{font-size:17px;color:#555}
-footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
+.soc-link i{font-size:17px;color:#666}
+.phone-row{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500}
+.phone-row i{font-size:18px;color:#666}
+
+footer{padding:1.25rem;text-align:center;font-size:13px;color:#888}
+
 @media(max-width:600px){
   .hero-content{padding:1rem}
-  .hero-title{font-size:26px}
+  .hero-title{font-size:34px}
   .qr-card{min-width:90px}
   .qr-card img{width:64px;height:64px}
   nav{flex-wrap:wrap;gap:.5rem}
+  .btn-book{font-size:15px;padding:13px 30px}
 }
 </style>
 </head>
@@ -145,10 +160,6 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
   </div>
 </nav>
 
-<!-- ============================================================
-  HERO — เปลี่ยนรูป: แก้ src ด้านล่าง
-         วางไฟล์รูปไว้ในโฟลเดอร์เดียวกับ index.html
-  ============================================================ -->
 <div class="hero">
   <img class="bg" src="Google_form_ver_2.png" alt="2D1N Weena Banner">
   <div class="hero-overlay"></div>
@@ -163,52 +174,44 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
       <img id="qrImg" alt="Line QR">
       <a href="https://lin.ee/WcSB5VV" target="_blank" id="qr-btn">แตะเพื่อเพิ่มเพื่อน</a>
     </div>
-  
-<div style="text-align:center; padding: 1.5rem 1.5rem; background: #f9f9f9; border-bottom: 0.5px solid #e5e5e5;">
-  <a href="https://forms.gle/Yf9ixk8tVb7MZVnE9" target="_blank" style="display: inline-block; background: #DC2626; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: 0.05em; transition: background 0.2s;">
-    📅 จองทริปของคุณ
-  </a>
+  </div>
 </div>
 
-<!-- ============================================================
-  COMING SOON
-  ★ วิธีเพิ่มทริป: copy บล็อก cs-card-real ด้านล่าง แล้วแก้ข้อมูล
-  ============================================================ -->
+<!-- BOOKING BUTTON -->
+<div class="booking-bar">
+  <a class="btn-book" href="https://forms.gle/Yf9ixk8tVb7MZVnE9" target="_blank">📅 จองทริปของคุณ</a>
+  <p class="booking-sub" id="book-sub">สอบถามและจองผ่าน Google Form ได้เลยครับ</p>
+</div>
+
+<!-- COMING SOON -->
 <section id="coming">
   <div class="sec-label" id="lbl-coming">เร็วๆ นี้ · Coming soon</div>
   <div class="cs-grid">
-
-    <!-- ★ TEMPLATE (ลบ /* และ */ ออก แล้วแก้ข้อมูล)
+    <!-- ★ TEMPLATE (ลบ /* */ ออก แล้วแก้ข้อมูล)
     <div class="cs-card-real">
       <div class="cs-real-img"><img src="รูปทริป.jpg" alt="ชื่อทริป"></div>
       <div class="cs-real-info">
-        <div class="cs-real-name">ชื่อทริป เช่น ดอยอินทนนท์</div>
+        <div class="cs-real-name">ชื่อทริป</div>
         <div class="cs-real-date">6–7 กรกฎาคม 2569</div>
         <div class="cs-real-price">฿ 3,300 / ท่าน</div>
       </div>
     </div>
     -->
-
     <div class="cs-card">
       <i class="ti ti-map-pin-plus"></i>
       <span id="cs-add">+ เพิ่มทริปใหม่</span>
-      <span style="font-size:11px" id="cs-hint">ชื่อทริป · วันเดินทาง · ราคา</span>
+      <span style="font-size:13px" id="cs-hint">ชื่อทริป · วันเดินทาง · ราคา</span>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================================
-  ALMOST FULL
-  ★ วิธีเพิ่ม: copy บล็อก af-card แล้วแก้ข้อมูล + ใส่รูป
-  ============================================================ -->
+<!-- ALMOST FULL -->
 <section id="full">
   <div class="sec-label" style="display:flex;align-items:center;gap:10px">
     <span id="lbl-full">ที่นั่งจำกัด</span>
     <span class="badge-hot"><span class="pulse"></span>Almost Full!</span>
   </div>
   <div class="af-grid">
-
     <!-- ★ TEMPLATE
     <div class="af-card">
       <div class="af-img"><img src="รูปทริป.jpg" alt="ชื่อทริป"></div>
@@ -219,7 +222,6 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
       </div>
     </div>
     -->
-
     <div class="af-card">
       <div class="af-img"><i class="ti ti-photo"></i></div>
       <div class="af-info">
@@ -228,14 +230,10 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
         <div class="af-seats">เหลือ — ที่นั่ง</div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================================
-  CALENDAR
-  ★ แก้ตารางเที่ยว: หา ALL_TRIPS ใน <script> ด้านล่าง
-  ============================================================ -->
+<!-- CALENDAR -->
 <section id="calendar">
   <div class="sec-label" id="lbl-cal">ปฏิทินเดินทาง</div>
   <div class="cal-nav">
@@ -261,38 +259,30 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
   </div>
 </section>
 
-<!-- ============================================================
-  BLOG
-  ★ วิธีเพิ่มบทความ: copy บล็อก blog-card แล้วแก้ข้อมูล
-  ============================================================ -->
+<!-- BLOG -->
 <section id="blog">
   <div class="sec-label" id="lbl-blog">บทความ · Blog</div>
   <div class="blog-grid">
-
-    <!-- ★ TEMPLATE บล็อก
-    <a class="blog-card" href="link-บทความ.html">
+    <!-- ★ TEMPLATE
+    <a class="blog-card" href="#">
       <div class="blog-img"><img src="รูปบล็อก.jpg" alt="ชื่อบทความ"></div>
       <div class="blog-info">
         <div class="blog-tag">ในประเทศ</div>
-        <div class="blog-title">รีวิว ดอยอินทนนท์ 2 วัน 1 คืน กับ 2D1N Weena</div>
-        <div class="blog-excerpt">พาเที่ยวยอดดอยสูงที่สุดในไทย ชมทะเลหมอก ดอกไม้ป่า และน้ำตกสวยๆ ในทริปเดียว</div>
+        <div class="blog-title">ชื่อบทความ</div>
+        <div class="blog-excerpt">สรุปสั้นๆ 2-3 ประโยค</div>
         <div class="blog-date">1 มิถุนายน 2569</div>
       </div>
     </a>
     -->
-
     <div class="blog-placeholder">
       <i class="ti ti-pencil-plus"></i>
       <span id="blog-add">+ เพิ่มบทความ</span>
-      <span style="font-size:11px" id="blog-hint">ชื่อบทความ · รูปภาพ · เนื้อหา</span>
+      <span style="font-size:13px" id="blog-hint">ชื่อบทความ · รูปภาพ · เนื้อหา</span>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================================
-  CONTACT — แก้ลิงก์ social ได้ตรงนี้
-  ============================================================ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="sec-label" id="lbl-contact">ช่องทางติดต่อ</div>
   <div class="social-grid">
@@ -307,54 +297,12 @@ footer{padding:1.25rem;text-align:center;font-size:11px;color:#bbb}
 <footer id="footer-txt">© 2025 2D1N Weena · แพ็คเกจทัวร์คุณภาพ · Nature · Adventure · Memories</footer>
 
 <script>
-// ============================================================
-//  LANGUAGE STRINGS — แก้คำแปลได้ที่นี่
-// ============================================================
-const T = {
-  th: {
-    navComing:'Coming Soon',navFull:'ที่นั่งจำกัด',navCal:'ปฏิทิน',navBlog:'บล็อก',navContact:'ติดต่อ',
-    hTag:'ทริปในประเทศ · ทริปต่างประเทศ',hSub:'Nature · Adventure · Memories',
-    qrLabel:'ติดต่อสอบถาม',qrBtn:'แตะเพื่อเพิ่มเพื่อน',
-    lblComing:'เร็วๆ นี้ · Coming soon',csAdd:'+ เพิ่มทริปใหม่',csHint:'ชื่อทริป · วันเดินทาง · ราคา',
-    lblFull:'ที่นั่งจำกัด',lblCal:'ปฏิทินเดินทาง',
-    tabAll:'ทั้งหมด',tabTh:'ในประเทศ',tabInt:'ต่างประเทศ',
-    legTh:'ในประเทศ',legInt:'ต่างประเทศ',
-    lblBlog:'บทความ · Blog',blogAdd:'+ เพิ่มบทความ',blogHint:'ชื่อบทความ · รูปภาพ · เนื้อหา',
-    lblContact:'ช่องทางติดต่อ',
-    footer:'© 2025 2D1N Weena · แพ็คเกจทัวร์คุณภาพ · Nature · Adventure · Memories',
-    months:['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],
-    dayHdr:['อา','จ','อ','พ','พฤ','ศ','ส'],
-    priceSuffix:' ฿',tba:'TBA',more:'เพิ่ม'
-  },
-  en: {
-    navComing:'Coming Soon',navFull:'Almost Full',navCal:'Calendar',navBlog:'Blog',navContact:'Contact',
-    hTag:'Domestic · International Trips',hSub:'Nature · Adventure · Memories',
-    qrLabel:'Contact us',qrBtn:'Add on Line',
-    lblComing:'Coming Soon',csAdd:'+ Add new trip',csHint:'Trip name · Date · Price',
-    lblFull:'Limited seats',lblCal:'Travel Calendar',
-    tabAll:'All',tabTh:'Domestic',tabInt:'International',
-    legTh:'Domestic',legInt:'International',
-    lblBlog:'Blog',blogAdd:'+ Add article',blogHint:'Title · Image · Content',
-    lblContact:'Contact us',
-    footer:'© 2025 2D1N Weena · Quality Tour Packages · Nature · Adventure · Memories',
-    months:['January','February','March','April','May','June','July','August','September','October','November','December'],
-    dayHdr:['Su','Mo','Tu','We','Th','Fr','Sa'],
-    priceSuffix:' ฿',tba:'TBA',more:'more'
-  }
+const T={
+  th:{navComing:'Coming Soon',navFull:'ที่นั่งจำกัด',navCal:'ปฏิทิน',navBlog:'บล็อก',navContact:'ติดต่อ',hTag:'ทริปในประเทศ · ทริปต่างประเทศ',hSub:'Nature · Adventure · Memories',qrLabel:'ติดต่อสอบถาม',qrBtn:'แตะเพื่อเพิ่มเพื่อน',bookSub:'สอบถามและจองผ่าน Google Form ได้เลยครับ',lblComing:'เร็วๆ นี้ · Coming soon',csAdd:'+ เพิ่มทริปใหม่',csHint:'ชื่อทริป · วันเดินทาง · ราคา',lblFull:'ที่นั่งจำกัด',lblCal:'ปฏิทินเดินทาง',tabAll:'ทั้งหมด',tabTh:'ในประเทศ',tabInt:'ต่างประเทศ',legTh:'ในประเทศ',legInt:'ต่างประเทศ',lblBlog:'บทความ · Blog',blogAdd:'+ เพิ่มบทความ',blogHint:'ชื่อบทความ · รูปภาพ · เนื้อหา',lblContact:'ช่องทางติดต่อ',footer:'© 2025 2D1N Weena · แพ็คเกจทัวร์คุณภาพ · Nature · Adventure · Memories',months:['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],dayHdr:['อา','จ','อ','พ','พฤ','ศ','ส'],priceSuffix:' ฿',tba:'TBA',more:'เพิ่ม'},
+  en:{navComing:'Coming Soon',navFull:'Almost Full',navCal:'Calendar',navBlog:'Blog',navContact:'Contact',hTag:'Domestic · International Trips',hSub:'Nature · Adventure · Memories',qrLabel:'Contact us',qrBtn:'Add on Line',bookSub:'Book your trip via Google Form',lblComing:'Coming Soon',csAdd:'+ Add new trip',csHint:'Trip name · Date · Price',lblFull:'Limited seats',lblCal:'Travel Calendar',tabAll:'All',tabTh:'Domestic',tabInt:'International',legTh:'Domestic',legInt:'International',lblBlog:'Blog',blogAdd:'+ Add article',blogHint:'Title · Image · Content',lblContact:'Contact us',footer:'© 2025 2D1N Weena · Quality Tour Packages · Nature · Adventure · Memories',months:['January','February','March','April','May','June','July','August','September','October','November','December'],dayHdr:['Su','Mo','Tu','We','Th','Fr','Sa'],priceSuffix:' ฿',tba:'TBA',more:'more'}
 };
 
-// ============================================================
-//  ★★★ ข้อมูลทริปทั้งหมด — แก้ตรงนี้เพื่ออัปเดตปฏิทิน ★★★
-//
-//  FORMAT แต่ละทริป:
-//  { m:เดือน, d:วัน, n:'ชื่อไทย', ne:'English Name',
-//    t:'th' หรือ 'int', f:'🇹🇭', dur:'2D1N', p:ราคา }
-//
-//  ตัวอย่างเพิ่มทริปใหม่ (copy บรรทัดนี้):
-//  {m:7, d:15, n:'ดอยใหม่', ne:'New Doi', t:'th', f:'🇹🇭', dur:'2D1N', p:3200},
-// ============================================================
-const ALL_TRIPS = [
-  // ─── มิถุนายน 2569 ───────────────────────────────────────
+const ALL_TRIPS=[
   {m:6,d:1,n:'เขาล้อมหมวก',ne:'Khao Lom Muak',t:'th',f:'🇹🇭',dur:'1D',p:1600},
   {m:6,d:6,n:'เขาหลวงสุโขทัย',ne:'Khao Luang Sukhothai',t:'th',f:'🇹🇭',dur:'2D1N',p:2460},
   {m:6,d:6,n:'ดอยห้วยทู่',ne:'Doi Huai Tu',t:'th',f:'🇹🇭',dur:'2D1N',p:3300},
@@ -369,7 +317,6 @@ const ALL_TRIPS = [
   {m:6,d:26,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
   {m:6,d:27,n:'ดอยหลวงตาก',ne:'Doi Luang Tak',t:'th',f:'🇹🇭',dur:'2D1N',p:3300},
   {m:6,d:27,n:'ดอยห้วยหมี',ne:'Doi Huai Mi',t:'th',f:'🇹🇭',dur:'2D1N',p:3200},
-  // ─── กรกฎาคม 2569 ────────────────────────────────────────
   {m:7,d:3,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
   {m:7,d:4,n:'เขาหลวงสุโขทัย',ne:'Khao Luang Sukhothai',t:'th',f:'🇹🇭',dur:'2D1N',p:2460},
   {m:7,d:4,n:'ดอยหลวงตาก',ne:'Doi Luang Tak',t:'th',f:'🇹🇭',dur:'2D1N',p:3300},
@@ -388,7 +335,6 @@ const ALL_TRIPS = [
   {m:7,d:26,n:'หุบเขาเสือกระโจน',ne:'Tiger Leaping Gorge',t:'int',f:'🇨🇳',dur:'5D4N',p:14990},
   {m:7,d:29,n:'เขาล้อมหมวก',ne:'Khao Lom Muak',t:'th',f:'🇹🇭',dur:'1D',p:1600},
   {m:7,d:31,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
-  // ─── สิงหาคม 2569 ────────────────────────────────────────
   {m:8,d:1,n:'เขาหลวงสุโขทัย',ne:'Khao Luang Sukhothai',t:'th',f:'🇹🇭',dur:'2D1N',p:2460},
   {m:8,d:1,n:'ม่อนสี่สหาย',ne:'Mon Si Sahai',t:'th',f:'🇹🇭',dur:'2D1N',p:3300},
   {m:8,d:6,n:'Kinabalu Malaysia',ne:'Kinabalu Malaysia',t:'int',f:'🇲🇾',dur:'4D3N',p:36900},
@@ -414,7 +360,6 @@ const ALL_TRIPS = [
   {m:8,d:29,n:'ม่อนสี่สหาย',ne:'Mon Si Sahai',t:'th',f:'🇹🇭',dur:'2D1N',p:3300},
   {m:8,d:29,n:'เขาแร้ง ราชบุรี',ne:'Khao Raeng Ratchaburi',t:'th',f:'🇹🇭',dur:'2D1N',p:2600},
   {m:8,d:29,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
-  // ─── กันยายน 2569 ────────────────────────────────────────
   {m:9,d:3,n:'เลอกวาเดาะ',ne:'Loe Kwa Daw',t:'th',f:'🇹🇭',dur:'2D1N',p:3400},
   {m:9,d:4,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
   {m:9,d:4,n:'Kowloon Peak',ne:'Kowloon Peak',t:'int',f:'🇭🇰',dur:'3D2N',p:9850},
@@ -430,7 +375,6 @@ const ALL_TRIPS = [
   {m:9,d:18,n:'เฉินตู สี่ดรุณี',ne:'Chengdu Si Guniang',t:'int',f:'🇨🇳',dur:'4D3N',p:21990},
   {m:9,d:24,n:'เลอกวาเดาะ',ne:'Loe Kwa Daw',t:'th',f:'🇹🇭',dur:'2D1N',p:3400},
   {m:9,d:25,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
-  // ─── ตุลาคม 2569 ─────────────────────────────────────────
   {m:10,d:1,n:'ฉงชิ่ง อุทยานหลุมฟ้า',ne:'Chongqing Tiankeng',t:'int',f:'🇨🇳',dur:'4D3N',p:13650},
   {m:10,d:2,n:'ลาวใต้ Bolaven',ne:'South Laos Bolaven',t:'int',f:'🇱🇦',dur:'3D2N',p:5200},
   {m:10,d:3,n:'ซาปา ฟานชิปัน',ne:'Sapa Fansipan',t:'int',f:'🇻🇳',dur:'4D3N',p:12650},
@@ -452,7 +396,6 @@ const ALL_TRIPS = [
   {m:10,d:28,n:'เลอกวาเดาะ',ne:'Loe Kwa Daw',t:'th',f:'🇹🇭',dur:'2D1N',p:3400},
   {m:10,d:31,n:'เขาอ่างแก้ว',ne:'Khao Ang Kaew',t:'th',f:'🇹🇭',dur:'2D1N',p:3600},
   {m:10,d:31,n:'ดอยผ้าห่มปก',ne:'Doi Pha Hom Pok',t:'th',f:'🇹🇭',dur:'2D1N',p:3200},
-  // ─── พฤศจิกายน 2569 ──────────────────────────────────────
   {m:11,d:5,n:'ดอยม่อนจอง',ne:'Doi Mon Jong',t:'th',f:'🇹🇭',dur:'2D1N',p:3600},
   {m:11,d:5,n:'ดานัง ฮอยอัน บานาฮีล',ne:'Da Nang Hoi An',t:'int',f:'🇻🇳',dur:'4D3N',p:12650},
   {m:11,d:6,n:'Via Ferrata จางเจียเจี้ย',ne:'Via Ferrata Zhangjiajie',t:'int',f:'🇨🇳',dur:'4D3N',p:16990},
@@ -471,7 +414,6 @@ const ALL_TRIPS = [
   {m:11,d:26,n:'ดอยม่อนจอง',ne:'Doi Mon Jong',t:'th',f:'🇹🇭',dur:'2D1N',p:3600},
   {m:11,d:26,n:'มุลาอิ',ne:'Mulai',t:'th',f:'🇹🇭',dur:'2D1N',p:3600},
   {m:11,d:27,n:'ซาปา ฟานชิปัน',ne:'Sapa Fansipan',t:'int',f:'🇻🇳',dur:'4D3N',p:12650},
-  // ─── ธันวาคม 2569 ────────────────────────────────────────
   {m:12,d:4,n:'Kowloon Peak',ne:'Kowloon Peak',t:'int',f:'🇭🇰',dur:'3D2N',p:9850},
   {m:12,d:4,n:'Almaty Kazakhstan',ne:'Almaty Kazakhstan',t:'int',f:'🇰🇿',dur:'5D4N',p:39900},
   {m:12,d:5,n:'ห้วยกุ๊บกั๊บ แม่กำปอง',ne:'Huai Kub Kab',t:'th',f:'🇹🇭',dur:'2D1N',p:0},
@@ -486,38 +428,21 @@ const ALL_TRIPS = [
   {m:12,d:20,n:'ฮาร์บิน หมู่บ้านหิมะ',ne:'Harbin Snow Village',t:'int',f:'🇨🇳',dur:'4D3N',p:14990},
   {m:12,d:24,n:'Nepal ABC + Mardi Trek',ne:'Nepal ABC + Mardi Trek',t:'int',f:'🇳🇵',dur:'13D',p:33500},
   {m:12,d:28,n:'ฮาร์บิน หมู่บ้านหิมะ',ne:'Harbin Snow Village',t:'int',f:'🇨🇳',dur:'4D3N',p:14990},
-  // ─── เพิ่มเดือนใหม่ได้ที่นี่ ──────────────────────────────
 ];
 
-// ============================================================
-//  LOGIC — ไม่ต้องแก้ส่วนนี้
-// ============================================================
 const DAYS_IN=[0,31,28,31,30,31,30,31,31,30,31,30,31];
 const FIRST_DAY=[0,4,0,0,3,5,0,2,5,1,3,6,1];
 let curM=6,filt='all',lang='th';
 
-function setLang(l,btn){
-  lang=l;
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  applyLang();renderCal();
-}
+function setLang(l,btn){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyLang();renderCal();}
 function applyLang(){
   const t=T[lang];
-  const ids={'nav-coming':t.navComing,'nav-full':t.navFull,'nav-cal':t.navCal,'nav-blog':t.navBlog,'nav-contact':t.navContact,'h-tag':t.hTag,'h-sub':t.hSub,'qr-label':t.qrLabel,'qr-btn':t.qrBtn,'lbl-coming':t.lblComing,'cs-add':t.csAdd,'cs-hint':t.csHint,'lbl-full':t.lblFull,'lbl-cal':t.lblCal,'tab-all':t.tabAll,'tab-th':t.tabTh,'tab-int':t.tabInt,'leg-th':t.legTh,'leg-int':t.legInt,'lbl-blog':t.lblBlog,'blog-add':t.blogAdd,'blog-hint':t.blogHint,'lbl-contact':t.lblContact,'footer-txt':t.footer};
+  const ids={'nav-coming':t.navComing,'nav-full':t.navFull,'nav-cal':t.navCal,'nav-blog':t.navBlog,'nav-contact':t.navContact,'h-tag':t.hTag,'h-sub':t.hSub,'qr-label':t.qrLabel,'qr-btn':t.qrBtn,'book-sub':t.bookSub,'lbl-coming':t.lblComing,'cs-add':t.csAdd,'cs-hint':t.csHint,'lbl-full':t.lblFull,'lbl-cal':t.lblCal,'tab-all':t.tabAll,'tab-th':t.tabTh,'tab-int':t.tabInt,'leg-th':t.legTh,'leg-int':t.legInt,'lbl-blog':t.lblBlog,'blog-add':t.blogAdd,'blog-hint':t.blogHint,'lbl-contact':t.lblContact,'footer-txt':t.footer};
   for(const[id,val]of Object.entries(ids)){const el=document.getElementById(id);if(el)el.textContent=val;}
   document.getElementById('detailPanel').classList.remove('open');
 }
-function setF(f,btn){
-  filt=f;
-  document.querySelectorAll('.cal-tab').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');renderCal();
-  document.getElementById('detailPanel').classList.remove('open');
-}
-function changeMonth(d){
-  curM=Math.max(6,Math.min(12,curM+d));renderCal();
-  document.getElementById('detailPanel').classList.remove('open');
-}
+function setF(f,btn){filt=f;document.querySelectorAll('.cal-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderCal();document.getElementById('detailPanel').classList.remove('open');}
+function changeMonth(d){curM=Math.max(6,Math.min(12,curM+d));renderCal();document.getElementById('detailPanel').classList.remove('open');}
 function renderCal(){
   const t=T[lang];
   document.getElementById('monthLabel').textContent=t.months[curM-1]+' 2569';
@@ -528,12 +453,9 @@ function renderCal(){
   for(let day=1;day<=td;day++){
     const trips=ALL_TRIPS.filter(tr=>tr.m===curM&&tr.d===day&&(filt==='all'||tr.t===filt));
     const has=trips.length>0;
-    const click=has?`onclick="showDay(${day})"`:'' ;
+    const click=has?`onclick="showDay(${day})"`:'';
     let pills='';
-    trips.slice(0,2).forEach(tr=>{
-      const name=lang==='en'?tr.ne:tr.n;
-      pills+=`<span class="trip-pill ${tr.t==='th'?'pill-th':'pill-int'}">${tr.f} ${name}</span>`;
-    });
+    trips.slice(0,2).forEach(tr=>{const name=lang==='en'?tr.ne:tr.n;pills+=`<span class="trip-pill ${tr.t==='th'?'pill-th':'pill-int'}">${tr.f} ${name}</span>`;});
     if(trips.length>2)pills+=`<span class="more-tag">+${trips.length-2} ${t.more}</span>`;
     html+=`<div class="cal-cell${has?' has-trip':''}" ${click}><div class="day-num">${day}</div>${pills}</div>`;
   }
@@ -543,16 +465,9 @@ function showDay(day){
   const t=T[lang];
   document.getElementById('detailDate').textContent=`${day} ${t.months[curM-1]} 2569`;
   const trips=ALL_TRIPS.filter(tr=>tr.m===curM&&tr.d===day&&(filt==='all'||tr.t===filt));
-  document.getElementById('detailTrips').innerHTML=trips.map(tr=>`
-    <div class="trip-row">
-      <div class="t-flag">${tr.f}</div>
-      <div class="t-info"><div class="t-name">${lang==='en'?tr.ne:tr.n}</div><div class="t-meta">${tr.dur}</div></div>
-      <div class="t-price">${tr.p>0?tr.p.toLocaleString()+t.priceSuffix:t.tba}</div>
-    </div>`).join('');
+  document.getElementById('detailTrips').innerHTML=trips.map(tr=>`<div class="trip-row"><div class="t-flag">${tr.f}</div><div class="t-info"><div class="t-name">${lang==='en'?tr.ne:tr.n}</div><div class="t-meta">${tr.dur}</div></div><div class="t-price">${tr.p>0?tr.p.toLocaleString()+t.priceSuffix:t.tba}</div></div>`).join('');
   document.getElementById('detailPanel').classList.add('open');
 }
-
-// QR Code
 document.getElementById('qrImg').src='data:image/jpeg;base64,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';
 renderCal();
 </script>
