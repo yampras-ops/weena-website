@@ -193,6 +193,21 @@ section{padding:1.75rem 1.5rem;border-bottom:.5px solid var(--border)}
 
 footer{padding:1.25rem;text-align:center;font-size:14px;color:#888;font-weight:500}
 
+/* ALBUM STRIP */
+.album-section{padding:1.4rem 1.5rem 1.2rem;border-bottom:.5px solid var(--border)}
+.album-scroll{display:flex;gap:.85rem;overflow-x:auto;padding-bottom:.5rem;scrollbar-width:none;-ms-overflow-style:none}
+.album-scroll::-webkit-scrollbar{display:none}
+.album-card{flex:0 0 190px;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;border:.5px solid var(--border);background:#fff;transition:box-shadow .18s,transform .18s;display:block}
+.album-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.15);transform:translateY(-3px)}
+.album-thumb{height:128px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.album-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.album-thumb-icon{font-size:38px;color:rgba(255,255,255,.8);position:relative;z-index:1}
+.album-body{padding:.72rem .85rem .82rem}
+.album-name{font-size:13.5px;font-weight:700;color:#0a0a0a;margin-bottom:3px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.album-loc{font-size:12px;color:#777;margin-bottom:.5rem;font-weight:500}
+.album-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#1877F2}
+.album-link i{font-size:13px}
+
 @media(max-width:600px){
   .hero-content{padding:1rem}
   .hero-title{font-size:34px}
@@ -273,6 +288,105 @@ footer{padding:1.25rem;text-align:center;font-size:14px;color:#888;font-weight:5
     <i class="ti ti-x" id="searchClear" style="cursor:pointer;display:none;color:#bbb" onclick="clearSearch()"></i>
   </div>
   <div class="search-results" id="searchResults"></div>
+</div>
+
+<!-- ALBUM STRIP -->
+<div class="album-section">
+  <div class="sec-label">📷 อัลบัมรูปทริป</div>
+  <div class="album-scroll" id="albumStrip">
+
+    <!-- 1. โบรโม่ อินโดนีเซีย -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid0BbfGgxQcppT7kR5G6hjQ6W8U8XpGGhQPQR6XrXCjZ99sPz6UcsrtSNGnzYtYxe5Vl" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#C05621 0%,#9C4221 50%,#7B2D00 100%)">
+        <img src="weena-website/album-bromo.jpg" alt="โบรโม่" onerror="this.style.display='none'">
+        <i class="ti ti-mountain album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">ภูเขาไฟโบรโม่ · คาวาอิเจี้ยน</div>
+        <div class="album-loc">🇮🇩 อินโดนีเซีย · 4วัน 3คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 2. หุบเขาเสือกระโจน -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid02k7AwLo1PhH4Wqb2VUgiD6nbzXNp57eRB81CVfrdKXBQUwutFw69SnZfJgGDqu6DVl" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#7B5E3A 0%,#4A3728 50%,#2D2016 100%)">
+        <img src="weena-website/album-tlg.jpg" alt="Tiger Leaping Gorge" onerror="this.style.display='none'">
+        <i class="ti ti-mountain album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">หุบเขาเสือกระโจน TLG</div>
+        <div class="album-loc">🇨🇳 ยูนนาน จีน · 5วัน 4คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 3. ABC + Mardi เนปาล -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid02VaqPCrNo21wUadjr3aLpxbAQ7e7sgQH2fTpNK9SvS5pwG4kryhxp3Gq1nHJSwHXnl" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#2C5282 0%,#1A365D 50%,#0D2340 100%)">
+        <img src="weena-website/album-nepal.jpg" alt="ABC Mardi Nepal" onerror="this.style.display='none'">
+        <i class="ti ti-mountain album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">ABC + Mardi Himal Trek</div>
+        <div class="album-loc">🇳🇵 เนปาล · 13วัน 12คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 4. Almaty คาซัคสถาน -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid09sJBKwSqVbE1HGKz6qAnh7y4jp994hDqLgqcz9YU8fW5enNJbg3jj2FRxAbcm2mal" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#276749 0%,#1C4532 50%,#0F2E20 100%)">
+        <img src="weena-website/album-almaty.jpg" alt="Almaty Kazakhstan" onerror="this.style.display='none'">
+        <i class="ti ti-trees album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">Almaty · คาซัคสถาน</div>
+        <div class="album-loc">🇰🇿 Kazakhstan · 5วัน 4คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 5. จางเจียเจี้ย Via Ferrata -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid0PxJCeryinXu4KqoXy3QBdw3e9CUH1KJhwtAGS81cXHafmpjBaACi7mkgiaXZgh26l" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#2B6CB0 0%,#1A4A7A 50%,#0D2B4A 100%)">
+        <img src="weena-website/album-zhangjiajie.jpg" alt="จางเจียเจี้ย" onerror="this.style.display='none'">
+        <i class="ti ti-walk album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">จาง/เจีย/จั้ย Via Ferrata</div>
+        <div class="album-loc">🇨🇳 จีน · 4วัน 3คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 6. เฉินตู สี่ดรุณี -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid0zShWvN6fa8ueeC95EGwYDnKAn8yLGa2iW6uGsSRGyVgmqMhwDdvxJc9oog9FQ2rhl" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#553C9A 0%,#3730A3 50%,#1E1B4B 100%)">
+        <img src="weena-website/album-siguniang.jpg" alt="สี่ดรุณี" onerror="this.style.display='none'">
+        <i class="ti ti-snowflake album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">เฉินตู · สี่ดรุณี · ปี้เผิงโกว</div>
+        <div class="album-loc">🇨🇳 เสฉวน จีน · 4วัน 3คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+    <!-- 7. ซินเจียง -->
+    <a class="album-card" href="https://www.facebook.com/tourwithweena/posts/pfbid02JD6ZgY2GjkDRerfwRgxT73LRpVzvwf1Bu41DeUxbB1G6fzGv2pxwhN1DhtErJJMVl" target="_blank" rel="noopener">
+      <div class="album-thumb" style="background:linear-gradient(135deg,#2C5282 0%,#744210 50%,#3B2106 100%)">
+        <img src="weena-website/album-xinjiang.jpg" alt="ซินเจียง" onerror="this.style.display='none'">
+        <i class="ti ti-mountain album-thumb-icon"></i>
+      </div>
+      <div class="album-body">
+        <div class="album-name">ซินเจียง · ดินแดนตะวันตก</div>
+        <div class="album-loc">🇨🇳 Xinjiang จีน · 7วัน 6คืน</div>
+        <div class="album-link"><i class="ti ti-brand-facebook"></i>ดูรูปเพิ่มเติม</div>
+      </div>
+    </a>
+
+  </div>
 </div>
 
 <!-- THIS WEEK -->
