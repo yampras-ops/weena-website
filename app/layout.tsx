@@ -13,14 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter Project",
-  description: "A clean starting point for building your site.",
-  other: {
-    "codex-preview": "development",
+  metadataBase: new URL("https://weena2d1n.com"),
+  title: "Weena Tour | เข้าป่า 2 Days 1 Night",
+  description:
+    "แพ็กเกจท่องเที่ยวและทริปเดินป่าทั้งในประเทศและต่างประเทศ โดย Weena Tour",
+  alternates: {
+    canonical: "/",
   },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Weena Tour | เข้าป่า 2 Days 1 Night",
+    description:
+      "แพ็กเกจท่องเที่ยวและทริปเดินป่าทั้งในประเทศและต่างประเทศ โดย Weena Tour",
+    url: "/",
+    siteName: "Weena Tour",
+    locale: "th_TH",
+    type: "website",
+    images: [
+      {
+        url: "/weena-cover.png",
+        width: 1600,
+        height: 400,
+        alt: "Weena Tour | เข้าป่า 2 Days 1 Night",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Weena Tour | เข้าป่า 2 Days 1 Night",
+    description:
+      "แพ็กเกจท่องเที่ยวและทริปเดินป่าทั้งในประเทศและต่างประเทศ โดย Weena Tour",
+    images: ["/weena-cover.png"],
   },
 };
 
@@ -30,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="th">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
