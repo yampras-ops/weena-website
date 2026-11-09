@@ -1,4 +1,5 @@
 export const tripMedia: Record<string, string[]> = {
+  "หุบเขาเสือกระโจน": ["/tiger-gorge-cover.jpg", "/tiger-gorge-gallery-01.jpg", "/tiger-gorge-gallery-02.jpg", "/tiger-gorge-gallery-03.jpg", "/tiger-gorge-gallery-04.jpg", "/tiger-gorge-gallery-05.jpg", "/tiger-gorge-gallery-06.jpg", "/tiger-gorge-gallery-07.jpg"],
   "ภูเขาหิมะหย่าลา": ["/yala-01.jpg", "/yala-02.jpg", "/yala-03.jpg", "/yala-04.jpg", "/yala-05.jpg", "/yala-06.jpg", "/yala-07.jpg", "/yala-08.jpg", "/yala-09.jpg", "/yala-10.jpg"],
   "กลอเซโล พุยโค": [
     "https://lh3.googleusercontent.com/d/1TLccufGDPaG5WHrHfQYEB0TrEPgDc05z=w1600",
