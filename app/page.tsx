@@ -16,9 +16,9 @@ const forms = {
   "ในประเทศ": "https://forms.gle/VmqBhkGDQyjJrQKJ7",
 };
 
-const fireSalePromos: { tripName: string; oldPrice: string; promoPrice: string; note: string }[] = [];
+const recommendedTripNames = ["หุบเขาเสือกระโจน", "ภูเขาหิมะหย่าลา", "Kowloon Peak", "Mardi Himal", "ฮาร์บิน", "สี่ดรุณี ปี้เผิงโกว"];
 
-const hiddenTripNames = new Set(["หุบเขาเสือกระโจน", "ป่าลับ", "สันเย็น จ.สุราษฎร์ฯ"]);
+const hiddenTripNames = new Set(["ป่าลับ", "สันเย็น จ.สุราษฎร์ฯ"]);
 const availableTrips = Array.from(
   trips
     .filter((trip) => !hiddenTripNames.has(trip.name))
@@ -111,40 +111,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pinned-promos" aria-labelledby="fire-sale-title">
+      <section className="pinned-promos" aria-labelledby="recommended-title">
         <div className="promo-heading">
           <div>
-            <p className="eyebrow">PINNED DEALS</p>
-            <h2 id="fire-sale-title">โปรไฟไหม้ <em>จำนวนจำกัด!</em></h2>
+            <p className="eyebrow">OUR TOP PICKS</p>
+            <h2 id="recommended-title">แนะนำที่สุด</h2>
           </div>
-          <p>ราคาพิเศษมีจำนวนจำกัด กรุณาตรวจสอบที่นั่งกับทีม Weena ก่อนจอง</p>
+          <p>เส้นทางแนะนำจาก Weena เลือกทริปที่ใช่ แล้วดูรายละเอียดก่อนออกเดินทาง</p>
         </div>
         <div className="promo-grid">
-          {fireSalePromos.map((promo) => {
-            const trip = availableTrips.find((item) => item.name === promo.tripName);
+          {recommendedTripNames.map((tripName) => {
+            const trip = availableTrips.find((item) => item.name === tripName);
             if (!trip) return null;
             const promoCover = tripMedia[trip.name]?.[0];
             return (
-              <article className="promo-card" key={promo.tripName}>
+              <article className="promo-card" key={trip.name}>
                 <button
                   className={`promo-image ${promoCover ? "has-photo" : ""}`}
                   style={promoCover ? { backgroundImage: `url("${promoCover}")` } : undefined}
-                  onClick={() => setSelected({ ...trip, price: promo.promoPrice })}
-                  aria-label={`ดูโปร ${trip.name}`}
+                  onClick={() => setSelected(trip)}
+                  aria-label={`ดูรายละเอียด ${trip.name}`}
                 >
-                  <span className="pin-badge">PIN POST</span>
-                  {!promoCover && <span className="promo-image-note">รอรูปโปรโมชันจาก Boss</span>}
+                  <span className="pin-badge">แนะนำ</span>
+                  {!promoCover && <span className="promo-image-note">รอรูปประกอบทริป</span>}
                 </button>
                 <div className="promo-info">
                   <div>
                     <p>{trip.place || countryNames[trip.code]} · {trip.type}</p>
                     <h3>{trip.name}</h3>
-                    <span>{promo.note}</span>
+                    <span>{trip.dates}</span>
                   </div>
                   <div className="promo-price">
-                    <del>฿{promo.oldPrice}</del>
-                    <strong>฿{promo.promoPrice}</strong>
-                    <button onClick={() => setSelected({ ...trip, price: promo.promoPrice })}>ดูรายละเอียด →</button>
+                    <strong>{trip.price ? `฿${trip.price}` : "รอยืนยันราคา"}</strong>
+                    <button onClick={() => setSelected(trip)}>ดูรายละเอียด →</button>
                   </div>
                 </div>
               </article>
