@@ -16,14 +16,7 @@ const forms = {
   "ในประเทศ": "https://forms.gle/VmqBhkGDQyjJrQKJ7",
 };
 
-const fireSalePromos = [
-  {
-    tripName: "เขาอู่กง",
-    oldPrice: "14,990",
-    promoPrice: "9,600",
-    note: "10–13 ก.ย. 69 · 16–19 ต.ค. 69 · 16–19 ม.ค. 70",
-  },
-];
+const fireSalePromos: { tripName: string; oldPrice: string; promoPrice: string; note: string }[] = [];
 
 const hiddenTripNames = new Set(["หุบเขาเสือกระโจน", "ป่าลับ", "สันเย็น จ.สุราษฎร์ฯ"]);
 const availableTrips = Array.from(
@@ -31,7 +24,7 @@ const availableTrips = Array.from(
     .filter((trip) => !hiddenTripNames.has(trip.name))
     .reduce((byName, trip) => {
       const current = byName.get(trip.name);
-      if (!current || (trip.name === "เขาอู่กง" && trip.price === "9,600")) {
+      if (!current) {
         byName.set(trip.name, trip);
       }
       return byName;
@@ -128,9 +121,7 @@ export default function Home() {
         </div>
         <div className="promo-grid">
           {fireSalePromos.map((promo) => {
-            const trip = availableTrips.find((item) => item.name === promo.tripName && (
-              promo.tripName !== "เขาอู่กง" || item.price === "9,600"
-            ));
+            const trip = availableTrips.find((item) => item.name === promo.tripName);
             if (!trip) return null;
             const promoCover = tripMedia[trip.name]?.[0];
             return (
