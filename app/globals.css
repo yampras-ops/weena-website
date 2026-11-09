@@ -270,3 +270,35 @@ dd { margin: 0; font-size: 13px; line-height: 1.65; font-weight: 700; }
   dl > div { grid-template-columns: 90px 1fr; }
   footer { padding: 28px 20px; }
 }
+
+.trip-title-button { color: inherit; font: inherit; letter-spacing: inherit; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; overflow-wrap: anywhere; }
+.trip-title-button:focus-visible, .grid-options button:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.grid-options { display: none; }
+@media (max-width: 800px) {
+  .directory-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+  .directory-controls .result-note { margin: 0; }
+  .grid-options { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .grid-options span { margin-right: 6px; }
+  .grid-options button { min-width: 44px; min-height: 44px; border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 6px; font-weight: 800; cursor: pointer; }
+  .grid-options button[aria-pressed="true"] { background: var(--green); color: white; border-color: var(--green); }
+  .trip-grid.mobile-columns-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .trip-grid.mobile-columns-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .trip-grid.mobile-columns-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .trip-grid .trip-body { padding: 10px; }
+  .trip-grid .trip-body h3 { font-size: 16px; min-height: 0; }
+  .trip-grid .price-row { flex-wrap: wrap; }
+  .trip-grid .price-row strong { font-size: 16px; overflow-wrap: anywhere; }
+  .trip-grid .dates { min-height: 0; }
+  .mobile-columns-3 .trip-kicker, .mobile-columns-4 .trip-kicker,
+  .mobile-columns-3 .dates, .mobile-columns-4 .dates,
+  .mobile-columns-3 .details-button, .mobile-columns-4 .details-button,
+  .mobile-columns-3 .country-mark, .mobile-columns-4 .country-mark,
+  .mobile-columns-3 .image-status, .mobile-columns-4 .image-status,
+  .mobile-columns-3 .price-row small, .mobile-columns-4 .price-row small { display: none; }
+  .mobile-columns-3 .trip-visual, .mobile-columns-4 .trip-visual { height: auto; min-height: 0; aspect-ratio: 1; width: 100%; }
+  .mobile-columns-3 .trip-body, .mobile-columns-4 .trip-body { padding: 7px; }
+  .mobile-columns-3 .trip-body h3, .mobile-columns-4 .trip-body h3 { font-size: 12px; line-height: 1.5; margin: 0 0 6px; }
+  .mobile-columns-3 .trip-title-button, .mobile-columns-4 .trip-title-button { min-height: 44px; width: 100%; }
+  .mobile-columns-3 .price-row, .mobile-columns-4 .price-row { border: 0; padding: 0; }
+  .mobile-columns-3 .price-row strong, .mobile-columns-4 .price-row strong { font-size: 12px; line-height: 1.4; }
+}

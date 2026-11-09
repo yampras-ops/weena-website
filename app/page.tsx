@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { trips, type Trip } from "./trip-data";
 import { tripMedia } from "./trip-media";
 
@@ -48,7 +48,7 @@ function TripCard({ trip, onOpen }: { trip: Trip; onOpen: (trip: Trip) => void }
       </button>
       <div className="trip-body">
         <div className="trip-kicker">{trip.place || countryNames[trip.code]}</div>
-        <h3>{trip.name}</h3>
+        <h3><button className="trip-title-button" onClick={() => onOpen(trip)}>{trip.name}</button></h3>
         <p className="dates">{trip.dates}</p>
         <div className="price-row">
           <div><small>เริ่มต้น</small><strong>{trip.price ? `฿${trip.price}` : "รอยืนยันราคา"}</strong></div>
@@ -61,6 +61,17 @@ function TripCard({ trip, onOpen }: { trip: Trip; onOpen: (trip: Trip) => void }
 
 export default function Home() {
   const [active, setActive] = useState<"ทั้งหมด" | "ต่างประเทศ" | "ในประเทศ">("ทั้งหมด");
+  const [columns, setColumns] = useState<2 | 3 | 4>(2);
+  useEffect(() => {
+    try {
+      const saved = Number(localStorage.getItem("weena-trip-columns"));
+      if (saved === 2 || saved === 3 || saved === 4) setColumns(saved);
+    } catch { /* Browsing still works when storage is unavailable. */ }
+  }, []);
+  const chooseColumns = (value: 2 | 3 | 4) => {
+    setColumns(value);
+    try { localStorage.setItem("weena-trip-columns", String(value)); } catch { /* Keep this session's choice. */ }
+  };
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<Trip | null>(null);
   const searchTrips = (value: string, moveToResults = false) => {
@@ -163,8 +174,16 @@ export default function Home() {
           </div>
           <p className="toolbar-note">ดูทริปทั้งหมด หรือใช้ช่องค้นหาบนภาพหน้าปก</p>
         </div>
-        <div className="result-note">แสดง {visibleTrips.length} จาก {availableTrips.length} เส้นทาง</div>
-        <div className="trip-grid">
+        <div className="directory-controls">
+          <div className="result-note" aria-live="polite">แสดง {visibleTrips.length} จาก {availableTrips.length} เส้นทาง</div>
+          <div className="grid-options" role="group" aria-label="รูปแบบการแสดงผล">
+            <span>รูปแบบการแสดงผล</span>
+            {([2, 3, 4] as const).map((value) => (
+              <button key={value} aria-label={`แสดง ${value} คอลัมน์`} aria-pressed={columns === value} onClick={() => chooseColumns(value)}>{value}</button>
+            ))}
+          </div>
+        </div>
+        <div className={`trip-grid mobile-columns-${columns}`}>
           {visibleTrips.map((trip, index) => <TripCard key={`${trip.name}-${index}`} trip={trip} onOpen={setSelected} />)}
         </div>
         {!visibleTrips.length && <div className="empty">ไม่พบเส้นทางที่ค้นหา ลองใช้คำค้นอื่นอีกครั้ง</div>}
