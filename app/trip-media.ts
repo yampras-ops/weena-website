@@ -1,4 +1,5 @@
 export const tripMedia: Record<string, string[]> = {
+  "ภูเขาหิมะหย่าลา": ["/yala-01.jpg", "/yala-02.jpg", "/yala-03.jpg", "/yala-04.jpg", "/yala-05.jpg", "/yala-06.jpg", "/yala-07.jpg", "/yala-08.jpg", "/yala-09.jpg", "/yala-10.jpg"],
   "กลอเซโล พุยโค": [
     "https://lh3.googleusercontent.com/d/1TLccufGDPaG5WHrHfQYEB0TrEPgDc05z=w1600",
     "https://lh3.googleusercontent.com/d/1xoCF2OMzYG01fTMoDLWQzOrnqX6_5a_3=w1600",
